@@ -5,7 +5,7 @@ RUN apk add --no-cache docker openrc \
     && rc-update add docker boot
 
 # Install OhMyZSH
-RUN apk add --no-cache git zsh \
+RUN apk add --no-cache git zsh curl \
     && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install ssh and add copy-ssh.sh
