@@ -7,4 +7,4 @@ RUN apk add --no-cache bash python3 curl \
 ENV PATH=$PATH:/root/gcloud/google-cloud-sdk/bin
 
 # Install firebase-tools
-RUN npm install -g npm firebase-tools
+RUN npm install -g firebase-tools
