@@ -1,6 +1,7 @@
 ## Build
 
 ```
+docker pull $(grep FROM base/Dockerfile | cut -d " " -f 2)
 docker build -t yenyen/vs-code:base base
 docker build -t yenyen/vs-code:gcloud gcloud
 docker build -t yenyen/vs-code:node node
