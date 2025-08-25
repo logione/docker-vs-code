@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3.22
 
 # Install docker
 RUN apk add --no-cache docker docker-compose openrc \
