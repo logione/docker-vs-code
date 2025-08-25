@@ -1,4 +1,4 @@
-FROM yenyen/vs-code:node-gcloud
+FROM yenyen/vs-code:node
 
 # Install Chromium
 RUN apk add --no-cache chromium
