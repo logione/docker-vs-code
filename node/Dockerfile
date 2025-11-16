@@ -1,7 +1,11 @@
+FROM node:lts-alpine AS node
 FROM yenyen/vs-code:base
 
 # Install nodejs (lts)
-RUN apk add --no-cache nodejs npm --repository=https://dl-cdn.alpinelinux.org/alpine/edge/main
+COPY --from=node /usr/lib /usr/lib
+COPY --from=node /usr/local/lib /usr/local/lib
+COPY --from=node /usr/local/include /usr/local/include
+COPY --from=node /usr/local/bin /usr/local/bin
 
 # Install strip
 RUN apk add --no-cache binutils

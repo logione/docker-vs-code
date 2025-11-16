@@ -3,7 +3,7 @@
 docker login
 
 docker build --pull -t yenyen/vs-code:base base
-docker build -t yenyen/vs-code:node node
+docker build --pull -t yenyen/vs-code:node node
 docker build -t yenyen/vs-code:angular angular
 
 docker push yenyen/vs-code:base
