@@ -14,10 +14,12 @@ RUN apk add --no-cache binutils
 RUN npm install -g npm typescript nodemon
 
 # Alias for npm, npm run, npm start, npm install, npm update, npm outdated
-RUN echo "alias n='npm'" >> /root/.zshrc & \
-    echo "alias r='npm run'" >> /root/.zshrc & \
-    echo "alias s='npm start'" >> /root/.zshrc & \
-    echo "alias i='npm install'" >> /root/.zshrc & \
-    echo "alias u='npm update'" >> /root/.zshrc & \
-    echo "alias o='npm outdated'" >> /root/.zshrc & \
-    echo "alias a='npm audit'" >> /root/.zsrhc
+RUN cat <<EOF >> /root/.zshrc
+alias n='npm'
+alias r='npm run'
+alias s='npm start'
+alias i='npm install'
+alias u='npm update'
+alias o='npm outdated'
+alias a='npm audit'
+EOF
