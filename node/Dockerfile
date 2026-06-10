@@ -22,4 +22,7 @@ alias i='npm install'
 alias u='npm update'
 alias o='npm outdated'
 alias a='npm audit'
+alias t='npm test'
+alias b='npm run build'
+alias f='npm audit fix'
 EOF
